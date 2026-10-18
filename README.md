@@ -23,9 +23,7 @@
 
 ## 🖼️ 截图
 
-> 把你的看板截图放到 `docs/` 下，并在这里引用：
->
-> `![screenshot](docs/screenshot.png)`
+![dashboard screenshot](docs/dashboard-screenshot.jpg)
 
 ## 🛠 技术栈
 
