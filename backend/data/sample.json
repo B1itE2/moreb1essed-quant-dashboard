@@ -1,0 +1,39 @@
+{
+  "candles": [
+    { "time": 1718500000, "open": 42000, "high": 42120, "low": 41980, "close": 42080, "volume": 210 },
+    { "time": 1718500060, "open": 42080, "high": 42210, "low": 42050, "close": 42190, "volume": 245 },
+    { "time": 1718500120, "open": 42190, "high": 42240, "low": 42090, "close": 42100, "volume": 180 },
+    { "time": 1718500180, "open": 42100, "high": 42300, "low": 42080, "close": 42270, "volume": 300 },
+    { "time": 1718500240, "open": 42270, "high": 42310, "low": 42150, "close": 42180, "volume": 220 },
+    { "time": 1718500300, "open": 42180, "high": 42350, "low": 42160, "close": 42320, "volume": 330 },
+    { "time": 1718500360, "open": 42320, "high": 42390, "low": 42280, "close": 42300, "volume": 260 },
+    { "time": 1718500420, "open": 42300, "high": 42460, "low": 42290, "close": 42430, "volume": 360 },
+    { "time": 1718500480, "open": 42430, "high": 42480, "low": 42360, "close": 42390, "volume": 240 },
+    { "time": 1718500540, "open": 42390, "high": 42510, "low": 42370, "close": 42480, "volume": 310 },
+    { "time": 1718500600, "open": 42480, "high": 42560, "low": 42440, "close": 42520, "volume": 290 },
+    { "time": 1718500660, "open": 42520, "high": 42600, "low": 42490, "close": 42570, "volume": 340 }
+  ],
+  "agents": [
+    { "id": "master",   "name": "主控 AGENT", "en": "MASTER",   "color": "#22D3EE", "face": "serious", "status": "working", "lastSay": "全局调度中，信号通道正常", "lastActive": "15:30:01" },
+    { "id": "intel",    "name": "情报 AGENT", "en": "INTEL",    "color": "#FFB800", "face": "curious", "status": "working", "lastSay": "检测到巨鲸地址异动", "lastActive": "15:30:02" },
+    { "id": "risk",     "name": "风控 AGENT", "en": "RISK",     "color": "#FF2E88", "face": "sleepy",  "status": "idle",    "lastSay": "回撤 1.2%，在阈值内", "lastActive": "15:29:58" },
+    { "id": "long",     "name": "多头 AGENT", "en": "LONG",     "color": "#00FF9D", "face": "excited", "status": "working", "lastSay": "趋势向好，建议加仓", "lastActive": "15:30:00" },
+    { "id": "short",    "name": "空头 AGENT", "en": "SHORT",    "color": "#FF2E88", "face": "cool",    "status": "idle",    "lastSay": "等待反弹做空机会", "lastActive": "15:29:55" },
+    { "id": "executor", "name": "执行 AGENT", "en": "EXECUTOR", "color": "#B388FF", "face": "happy",   "status": "working", "lastSay": "已下单 BTC 0.05，滑点 3bp", "lastActive": "15:30:03" }
+  ],
+  "logs": [
+    { "id": "1", "seq": 1, "ts": "15:30:01", "agent": { "en": "MASTER", "color": "#22D3EE" }, "thought": "开始本轮多智能体协同决策", "decision": { "action": "HOLD", "confidence": 0.9, "size": 0 } },
+    { "id": "2", "seq": 2, "ts": "15:30:02", "agent": { "en": "INTEL", "color": "#FFB800" }, "thought": "链上数据：交易所净流出增加", "decision": { "action": "BUY", "confidence": 0.78, "size": 0.05 } },
+    { "id": "3", "seq": 3, "ts": "15:30:03", "agent": { "en": "RISK", "color": "#FF2E88" }, "thought": "组合波动率可控，通过", "decision": { "action": "HOLD", "confidence": 0.85, "size": 0 } },
+    { "id": "4", "seq": 4, "ts": "15:30:04", "agent": { "en": "LONG", "color": "#00FF9D" }, "thought": "均线多头排列，动能向上", "decision": { "action": "ADD", "confidence": 0.82, "size": 0.03 } },
+    { "id": "5", "seq": 5, "ts": "15:30:05", "agent": { "en": "EXECUTOR", "color": "#B388FF" }, "thought": "收到多头指令，执行下单", "decision": { "action": "BUY", "confidence": 0.95, "size": 0.03 } }
+  ],
+  "equity": [
+    { "time": "15:20:00", "equity": 1000000 },
+    { "time": "15:22:00", "equity": 1002400 },
+    { "time": "15:24:00", "equity": 1001800 },
+    { "time": "15:26:00", "equity": 1005200 },
+    { "time": "15:28:00", "equity": 1009100 },
+    { "time": "15:30:00", "equity": 1012300 }
+  ]
+}

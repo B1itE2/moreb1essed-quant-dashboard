@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===== 以下为开源新增（数据安全相关）=====
+
+# npm 本地缓存（安装时可能生成在项目内）
+.npm-cache/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# 环境变量 / 密钥 / 私钥：绝不提交
+.env
+.env.*
+*.key
+*.pem
+secrets/
+
+# 真实交易数据：只保留示例，真实输出绝不入库
+backend/data/*.json
+!backend/data/sample.json

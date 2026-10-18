@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  /* 最底层：粉色世界 */
+  --color-bg-pink: #FF2E88;
+  --color-bg-pink-deep: #E1156F;
+  --color-bg-pink-light: #FF6FB0;
+
+  /* 面板层：深空黑 */
+  --color-bg-base: #12131A;
+  --color-bg-card: #171922;
+  --color-border-line: #33202E;
+  --color-border-glow: #FF2E88;
+
+  /* 霓虹语义色 */
+  --color-neon-green: #00FF9D;
+  --color-neon-pink: #FF2E88;
+  --color-neon-cyan: #22D3EE;
+  --color-neon-amber: #FFB800;
+  --color-neon-purple: #B388FF;
+  --color-text-dim: #9AA0B4;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* ===== 最底层：粉色背景（整个世界的地板）===== */
+body {
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(255, 255, 255, 0.25), transparent 60%),
+    radial-gradient(900px 500px at 90% 110%, rgba(255, 214, 236, 0.35), transparent 55%),
+    linear-gradient(160deg, #FF5CA8 0%, #FF2E88 45%, #E1156F 100%);
+  background-attachment: fixed;
+  color: #E8EAF2;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 46, 136, 0.45);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 46, 136, 0.7);
+}
+
+/* ===== 赛博细节 ===== */
+.glow-green {
+  text-shadow: 0 0 6px rgba(0, 255, 157, 0.65);
+}
+.glow-pink {
+  text-shadow: 0 0 6px rgba(255, 46, 136, 0.7);
+}
+.glow-cyan {
+  text-shadow: 0 0 6px rgba(34, 211, 238, 0.65);
+}
+.card-cyber {
+  background: #171922;
+  border: 1px solid #33202E;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+.card-cyber:hover {
+  border-color: rgba(255, 46, 136, 0.55);
+  box-shadow: 0 0 14px rgba(255, 46, 136, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 46, 136, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 46, 136, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* 顶部/标题的洋红霓虹分隔 */
+.neon-divider {
+  background: linear-gradient(90deg, transparent, #FF2E88, transparent);
+  height: 1px;
+}
+
+/* ===== 动效 ===== */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.blink-dot {
+  animation: blink 1.1s infinite;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.log-item {
+  animation: fadeInUp 0.25s ease-out;
+}
+
+/* 小贴纸 / 机器人漂浮 */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+.floaty {
+  animation: floaty 3.6s ease-in-out infinite;
+}
+.floaty-slow {
+  animation: floaty 5.2s ease-in-out infinite;
+}
+
+/* 机器人眼睛眨眼 */
+@keyframes robotBlink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.08); }
+}
+.robot-eye {
+  transform-origin: center;
+  animation: robotBlink 4.2s infinite;
+}
+
+/* 跑马灯无缝滚动 */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee {
+  animation: marquee 46s linear infinite;
+}
+.marquee:hover {
+  animation-play-state: paused;
+}
